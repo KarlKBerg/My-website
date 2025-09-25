@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="description" content="A simple HTML document" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d1eb956b1e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <title>My website | Home</title>
   </head>
@@ -33,30 +37,50 @@
 
       <div class="article-cards m-t20">
         <h2 class="td-u m-b10">Articles</h2>
-        <!-- The main content of the page -->
-        <section class="article-card" id="article-1">
-          <h2 class="m-b05">My Front-end journey</h2>
-          <p class="t-s14 m-b10 m-t05 f-w2">25.Sep.2025</p>
-          <img
-            class="m-t10 m-b10"
-            src="/images/pexels-pixabay-327540.jpg"
-            alt=""
-          />
-          <p class="m-b20 m-t10 l-h1">
-            Welcome to my website! I am currently studying front-end development
-            at Noroff. Here, I share my road to become a front-end developer. I
-            document my learning process, projects, and experiences as we go
-            through them. I will use this mainly for my own journey, but also
-            for others that might find it interesting. Feel free to explore and
-            follow along!
-          </p>
-          <a href="/articles/article-1.html">Read more</a>
-        </section>
+        <div class="scroll-buttons">
+          <i
+            class="fa-solid fa-chevron-left scroll-button left-arrow"
+            onclick="scrollContent(-400)"
+          ></i>
+          <i
+            class="fa-solid fa-chevron-right scroll-button right-arrow"
+            onclick="scrollContent(400)"
+          ></i>
+        </div>
+        <!-- Article cards carousel -->
+        <div id="scrollableContent" class="carousel-container">
+          <div class="card-wrapper">
+            <section class="article-card" id="article-1">
+              <h2 class="m-b05">My Front-end journey</h2>
+              <p class="t-s14 m-b10 m-t05 f-w2">25.Sep.2025</p>
+              <img
+                class="m-t10 m-b10"
+                src="/images/pexels-pixabay-327540.jpg"
+                alt=""
+              />
+              <p class="m-b20 m-t10 l-h1">
+                Welcome to my website! I am currently studying front-end
+                development at Noroff. Here, I share my road to become a
+                front-end developer. I document my learning process, projects,
+                and experiences as we go through them. I will use this mainly
+                for my own journey, but also for others that might find it
+                interesting. Feel free to explore and follow along!
+              </p>
+              <a href="/articles/article-1.html">Read more</a>
+            </section>
+          </div>
+        </div>
       </div>
     </main>
 
     <footer>
       <!-- The page's footer, usually contains copyright, links to terms of service, privacy policy, etc. -->
     </footer>
+    <script>
+      function scrollContent(scrollAmount) {
+        const contentWrapper = document.getElementById("scrollableContent");
+        contentWrapper.scrollLeft += scrollAmount;
+      }
+    </script>
   </body>
 </html>

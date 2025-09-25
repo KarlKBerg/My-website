@@ -114,8 +114,36 @@ main {
   background-color: #015501;
 }
 /*Articles*/
-
+.scroll-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.scroll-buttons i {
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+.scroll-buttons i:hover {
+  color: #7a7a7a;
+}
+.carousel-container {
+  width: 100%; /* Or a fixed width */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enforce snapping on the x-axis */
+  -webkit-overflow-scrolling: touch; /* Improve scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar for cleaner look (Firefox) */
+  -ms-overflow-style: none; /* Hide scrollbar for cleaner look (IE/Edge) */
+}
+.card-wrapper {
+  display: flex; /* Arrange cards horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 10px; /* Optional padding */
+  min-width: max-content; /* Ensures the wrapper is as wide as its content */
+}
 .article-card {
+  flex: 0 0 auto; /* Prevent shrinking and allow horizontal scrolling */
   width: 400px;
   padding: 10px;
   border-radius: 5px;
