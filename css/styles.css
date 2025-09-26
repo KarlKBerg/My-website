@@ -45,9 +45,14 @@ nav ul li a {
   text-decoration: none;
   padding: 5px 10px;
 }
+nav ul li a.active {
+  text-decoration: underline;
+  padding-top: 50px;
+}
 nav ul li a:hover {
   color: rgb(188, 188, 188);
   border-radius: 5px;
+  text-decoration: underline;
 }
 
 /*Main content*/
@@ -59,9 +64,12 @@ main {
   background-image: url("../images/pexels-pixabay-247899.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 600px;
   position: relative;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero::before {
   content: "";
@@ -74,14 +82,14 @@ main {
 }
 .hero h1 {
   position: relative;
-  padding: 20px;
+  padding: 0px 0px 20px 0px;
   font-size: 48px;
   z-index: 2;
 }
 .hero p {
   position: relative;
   z-index: 2;
-  padding: 0px 20px 20px 20px;
+  padding: 40px 0px 20px 0px;
   font-size: 24px;
 }
 .hero a {
@@ -93,7 +101,7 @@ main {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px;
+  margin: 20px 0px 20px 0px;
   text-decoration: none;
   display: inline-block;
 }
