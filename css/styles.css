@@ -58,7 +58,7 @@ main {
 .hero {
   background-image: url("../images/pexels-pixabay-247899.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
   height: 300px;
   position: relative;
   color: white;
