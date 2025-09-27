@@ -158,3 +158,11 @@ main {
 .article-card a:hover {
   color: #bcbcbc;
 }
+
+.learning-showcase {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #242424;
+  color: white;
+  border-radius: 5px;
+}
